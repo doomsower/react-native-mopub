@@ -1,0 +1,5 @@
+rootProject.name = 'example'
+
+include ':app'
+include ':react-native-mopub'
+project(':react-native-mopub').projectDir = new File(settingsDir, '../../android')

@@ -1,0 +1,30 @@
+{
+  "name": "react-native-mopub",
+  "version": "0.1.0",
+  "description": "React Native wrapper for to display MoPub ads",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doomsower/react-native-mopub.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "android",
+    "ios",
+    "mopub",
+    "ads",
+    "advertisement",
+    "banner",
+    "interstitial"
+  ],
+  "author": "Konstantin Kuznetsov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doomsower/react-native-mopub/issues"
+  },
+  "homepage": "https://github.com/doomsower/react-native-mopub#readme"
+}
