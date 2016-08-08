@@ -22,6 +22,7 @@
     "interstitial"
   ],
   "author": "Konstantin Kuznetsov",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/doomsower/react-native-mopub/issues"
   },
