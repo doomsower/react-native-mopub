@@ -50,7 +50,7 @@ public class MoPubBannerManager extends SimpleViewManager<RNMoPubBanner>{
         view.setKeywords(keywords);
     }
 
-    @javax.annotation.Nullable
+    @Nullable
     @Override
     public Map<String, Object> getExportedCustomDirectEventTypeConstants() {
         MapBuilder.Builder<String, Object> builder = MapBuilder.builder();

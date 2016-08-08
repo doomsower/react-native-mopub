@@ -36,8 +36,6 @@ export default class App extends Component {
           onLoaded={this.onLoaded}
           onFailed={this.onFailed}
           onClicked={this.onClicked}
-          onExpanded={this.onExpanded}
-          onCollapsed={this.onCollapsed}
         />
         <Button style={styles.button} onPress={this.onPress}>Show interstitial</Button>
       </View>
@@ -58,14 +56,6 @@ export default class App extends Component {
 
   onClicked = () => {
     console.log('MoPub banner was clicked');
-  };
-
-  onExpanded = () => {
-    console.log('MoPub banner was expanded');
-  };
-
-  onCollapsed = () => {
-    console.log('MoPub banner was collapsed');
   };
 
 }
