@@ -8,7 +8,7 @@ Under the hood, it wraps [MoPub Android SDK](https://github.com/mopub/mopub-andr
 
 This module works with **react-native 0.29.2+**
 
-For iOS version you'll [CocoaPods](https://cocoapods.org/)
+For iOS version you'll need [CocoaPods](https://cocoapods.org/)
 
 ## Installation 
 
@@ -19,7 +19,7 @@ npm install --save react-native-mopub
 ### Android
 
 1. Run `react-native link`
-2. Add permissions, activities and meta-data as to your `AndroidManifest.xml` as described [here](https://github.com/mopub/mopub-android-sdk/wiki/Getting-Started#updating-your-android-manifest) in official docs.
+2. Add permissions, activities and meta-data as to your `AndroidManifest.xml` as described [here](https://github.com/mopub/mopub-android-sdk/wiki/Getting-Started#updating-your-android-manifest) in the official docs.
 
 ### iOS
 
