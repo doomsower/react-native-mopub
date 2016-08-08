@@ -31,8 +31,7 @@ export default class App extends Component {
     return (
       <View style={styles.content}>
         <MoPubBanner 
-          adUnitId="b195f8dd8ded45fe847ad89ed1d016da"
-          testing={true}
+          adUnitId={BANNERL_UNIT_ID}
           autoRefresh={true}
           onLoaded={this.onLoaded}
           onFailed={this.onFailed}

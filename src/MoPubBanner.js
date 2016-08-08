@@ -15,7 +15,7 @@ const BannerPropTypes = {
   ...View.propTypes
 };
 
-const Banner = requireNativeComponent('RNMoPubBannerView', {name: 'Banner', propTypes: { ...BannerPropTypes }} );
+const Banner = requireNativeComponent('RNMoPubBanner', {name: 'Banner', propTypes: { ...BannerPropTypes }} );
 
 export default class MoPubBanner extends Component {
 

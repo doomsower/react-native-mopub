@@ -2,23 +2,17 @@ package camp.kuznetsov.rn.mopub;
 
 import android.support.annotation.Nullable;
 
-import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableNativeMap;
-import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.common.MapBuilder;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
-import com.facebook.react.uimanager.events.RCTEventEmitter;
-import com.mopub.common.util.Dips;
-import com.mopub.mobileads.MoPubErrorCode;
-import com.mopub.mobileads.MoPubView;
 
 import java.util.Map;
 
-public class MoPubBannerManager extends SimpleViewManager<RNMoPubView>{
-    public static final String REACT_CLASS = "RNMoPubBannerView";
+public class MoPubBannerManager extends SimpleViewManager<RNMoPubBanner>{
+    public static final String REACT_CLASS = "RNMoPubBanner";
 
     @Override
     public String getName() {
@@ -26,33 +20,33 @@ public class MoPubBannerManager extends SimpleViewManager<RNMoPubView>{
     }
 
     @Override
-    protected RNMoPubView createViewInstance(final ThemedReactContext reactContext) {
-        return new RNMoPubView(reactContext);
+    protected RNMoPubBanner createViewInstance(final ThemedReactContext reactContext) {
+        return new RNMoPubBanner(reactContext);
     }
 
     @ReactProp(name = "adUnitId")
-    public void setAdUnitId(RNMoPubView view, String adUnitId){
+    public void setAdUnitId(RNMoPubBanner view, String adUnitId){
         view.setAdUnitId(adUnitId);
         view.loadAd();
     }
 
     @ReactProp(name = "testing", defaultBoolean = false)
-    public void setTesting(RNMoPubView view, Boolean testing){
+    public void setTesting(RNMoPubBanner view, Boolean testing){
         view.setTesting(testing);
     }
 
     @ReactProp(name = "autoRefresh", defaultBoolean = true)
-    public void setAutoRefresh(RNMoPubView view, Boolean autoRefresh){
+    public void setAutoRefresh(RNMoPubBanner view, Boolean autoRefresh){
         view.setAutorefreshEnabled(autoRefresh);
     }
 
     @ReactProp(name = "localExtras")
-    public void setLocalExtras(RNMoPubView view, @Nullable  ReadableMap localExtras){
+    public void setLocalExtras(RNMoPubBanner view, @Nullable  ReadableMap localExtras){
         view.setLocalExtras(((ReadableNativeMap) localExtras).toHashMap());
     }
 
     @ReactProp(name = "keywords")
-    public void setKeywords(RNMoPubView view, @Nullable String keywords){
+    public void setKeywords(RNMoPubBanner view, @Nullable String keywords){
         view.setKeywords(keywords);
     }
 
@@ -60,11 +54,11 @@ public class MoPubBannerManager extends SimpleViewManager<RNMoPubView>{
     @Override
     public Map<String, Object> getExportedCustomDirectEventTypeConstants() {
         MapBuilder.Builder<String, Object> builder = MapBuilder.builder();
-        builder.put(RNMoPubView.EVENT_LOADED, MapBuilder.of("registrationName", RNMoPubView.EVENT_LOADED));
-        builder.put(RNMoPubView.EVENT_FAILED, MapBuilder.of("registrationName", RNMoPubView.EVENT_FAILED));
-        builder.put(RNMoPubView.EVENT_CLICKED, MapBuilder.of("registrationName", RNMoPubView.EVENT_CLICKED));
-        builder.put(RNMoPubView.EVENT_EXPANDED, MapBuilder.of("registrationName", RNMoPubView.EVENT_EXPANDED));
-        builder.put(RNMoPubView.EVENT_COLLAPSED, MapBuilder.of("registrationName", RNMoPubView.EVENT_COLLAPSED));
+        builder.put(RNMoPubBanner.EVENT_LOADED, MapBuilder.of("registrationName", RNMoPubBanner.EVENT_LOADED));
+        builder.put(RNMoPubBanner.EVENT_FAILED, MapBuilder.of("registrationName", RNMoPubBanner.EVENT_FAILED));
+        builder.put(RNMoPubBanner.EVENT_CLICKED, MapBuilder.of("registrationName", RNMoPubBanner.EVENT_CLICKED));
+        builder.put(RNMoPubBanner.EVENT_EXPANDED, MapBuilder.of("registrationName", RNMoPubBanner.EVENT_EXPANDED));
+        builder.put(RNMoPubBanner.EVENT_COLLAPSED, MapBuilder.of("registrationName", RNMoPubBanner.EVENT_COLLAPSED));
         return builder.build();
     }
 }

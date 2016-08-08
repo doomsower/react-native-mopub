@@ -11,14 +11,14 @@ import com.mopub.common.util.Dips;
 import com.mopub.mobileads.MoPubErrorCode;
 import com.mopub.mobileads.MoPubView;
 
-public class RNMoPubView extends MoPubView implements MoPubView.BannerAdListener, LifecycleEventListener {
+public class RNMoPubBanner extends MoPubView implements MoPubView.BannerAdListener, LifecycleEventListener {
     public static final String EVENT_LOADED    = "onLoaded";
     public static final String EVENT_FAILED    = "onFailed";
     public static final String EVENT_CLICKED   = "onClicked";
     public static final String EVENT_EXPANDED  = "onExpanded";
     public static final String EVENT_COLLAPSED = "onCollapsed";
 
-    public RNMoPubView(ReactContext context) {
+    public RNMoPubBanner(ReactContext context) {
         super(context);
         this.setBannerAdListener(this);
         context.addLifecycleEventListener(this);
