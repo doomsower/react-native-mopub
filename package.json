@@ -1,7 +1,7 @@
 {
   "name": "react-native-mopub",
   "version": "0.1.0",
-  "description": "React Native wrapper for to display MoPub ads",
+  "description": "React Native wrapper to display MoPub ads",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
