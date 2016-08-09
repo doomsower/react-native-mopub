@@ -48,7 +48,7 @@ To do so, add the following to your app plist:
 
 Check out the [example app](https://github.com/doomsower/react-native-mopub/blob/master/example/App.js). 
 
-This app uses asUnitIds from MoPub sample apps. 
+This app uses adUnitIds from MoPub sample apps. 
 
 ## Contributing
 
