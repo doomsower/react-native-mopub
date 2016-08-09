@@ -19,7 +19,7 @@ npm install --save react-native-mopub
 ### Android
 
 1. Run `react-native link`
-2. Add permissions, activities and meta-data as to your `AndroidManifest.xml` as described [here](https://github.com/mopub/mopub-android-sdk/wiki/Getting-Started#updating-your-android-manifest) in the official docs.
+2. Add permissions, activities and meta-data to your `AndroidManifest.xml` as described [here](https://github.com/mopub/mopub-android-sdk/wiki/Getting-Started#updating-your-android-manifest) in the official docs.
 
 ### iOS
 
